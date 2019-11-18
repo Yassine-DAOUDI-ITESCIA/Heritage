@@ -1,0 +1,37 @@
+class Ville:
+
+    def __init__(self, nom, nbhabitants=0):
+        self.nom = nom.upper()
+        self.nbhabitants = nbhabitants
+
+    def __str__(self):
+        return 'Ville de ' + self.nom + ' ; ' + str(self.nbhabitants) + ' habitant(s)'
+
+    def getNom(self):
+        return self.nom
+
+    def setNom(self, x):
+        self.nom = x
+
+    def getNbhabitants(self):
+        return self.nbhabitants
+
+    def setNbhabitants(self, x):
+        if x<0:
+            self.nbhabitants=0
+        else:
+            self.nbhabitants=x
+
+    def nbhabitantsconnu(self):
+        print(bool(self.nbhabitants!=0))
+
+    def categorie(self):
+        if self.nbhabitants<500000 and self.nbhabitants>0:
+            return 'A'
+        elif self.nbhabitants>=500000:
+            return 'B'
+        elif self.nbhabitants==0:
+            return '?'
+
+
+
