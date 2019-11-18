@@ -1,0 +1,33 @@
+from Ville import Ville
+class Capitale(Ville):
+
+    def __init__(self,nom,pays,nbhabitants=0):
+        Ville(nom,nbhabitants=0)
+        self.nom=nom.upper()
+        self.pays=pays.upper()
+        self.nbhabitants=nbhabitants
+
+    def getPays(self):
+        return self.pays
+
+    def setPays(self,x):
+        self.pays=x
+
+    def getNom(self):
+        return self.nom
+
+    def setNom(self, x):
+        self.nom = x
+
+    def getNbhabitants(self):
+        return self.nbhabitants
+
+    def setNbhabitants(self, x):
+        if x<0:
+            self.nbhabitants=0
+        else:
+            self.nbhabitants=x
+
+    def categorie(self):
+        if self.nom==self.nom:
+            return 'C'
